@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2017第二届两岸智慧好课堂邀请赛</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <script src="static/js/resize.min.js"></script>
+    <script src="static/js/data.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="http://mat1.gtimg.com/zj/yuwanli/dzw1702/zhxy_edu/static/css/reset.css">
+    <script type="text/javascript">
+      window.shareData = {
+        "imgUrl": "http://img1.gtimg.com/zj/pics/hv1/166/82/2189/142360801.png",/*微信分享显示的缩略图*/
+        "timeLineLink": window.location.href,
+        "tTitle": "2017第二届两岸智慧好课堂邀请赛暨两岸智慧教育高峰论坛邀请函",/*微信分享的标题*/
+        "tContent": "2017第二届两岸智慧好课堂邀请赛暨两岸智慧教育高峰论坛将于4月26日-28日在杭州市江干区举行。"/*微信分享的摘要文字*/
+      };
+    </script>
+  </head>
+  <body>
+
+    <!-- 全站流量统计代码 开始 -->
+    <!--pgv 20130819 v1.0.0-->
+    <script language="javascript" src="http://pingjs.qq.com/pingV3_1_5.js"></script>
+    <script>
+      /*
+       Austinjin 20130528 灰度comic
+       Austinjin 20130628 修复bug 灰度comic
+       Austinjin 20130725 新增ent
+       Austinjin 20130819 全站上线
+       全站pgv细分并统一
+       L=栏目信息: L.栏目.二级栏目.三级栏目
+       Z=专题信息：Z.栏目.二级栏目.三级栏目.专题名
+       W=文章类型：W.数字
+       M=模板类型：M.数字
+       P=频道信息：P.频道名
+       */
+      if(window['ARTICLE_INFO'] && window['ARTICLE_INFO']['catalog_full']){
+        function newPgvDetail(){
+          var catalogPath = ARTICLE_INFO.catalog_full.toString().replace(/-/g,".");
+          if(ARTICLE_INFO.topic.name.length>0){var L = "L.",Z = "Z." + catalogPath + "." + ARTICLE_INFO.topic.name;}else{var L = "L." + catalogPath,Z = "Z.";}
+          var W = "W." + ARTICLE_INFO.type,M = "M." + ARTICLE_INFO.tpl.type + ARTICLE_INFO.tpl.stype,P = "P." + ARTICLE_INFO.site,pgvInfo = L + "_" + Z + "_" + W + "_" + M + "_" + P;
+          if(typeof(pgvMain) == 'function'){if(typeof(pgvInfo) != 'undefined'){pgvMain({pgUserType:pgvInfo});}}
+        }newPgvDetail();}
+      else if(typeof(pgvMain) == 'function'){if(typeof(whatCatalog) != 'undefined'){pvCSTM = whatCatalog;pgvMain();}else{pgvMain();}}
+    </script>
+
+    <!--pgv 20130819 v1.0.0 end-->
+    <!--[if !IE]>|xGv00|3c1dbc0846d542b46fa617f906aeb77f<![endif]-->
+    <script language="javascript" src="http://pingjs.qq.com/ping.js"></script>
+    <script language="javascript"> if(typeof(pgvMain) == 'function') { pvCSTM = "fashion"; pgvMain(); } </script>
+
+    <!--普通专题pgv统计代码请放在<body>标签下方,重大项目报道及频道首页改版pgv统计代码放于首屏后.-->
+    <!-- 全站流量统计代码 结束 -->
+    <div class="videoCon" id="videoCon">
+      <div class="skip" id="skip">跳过</div>
+      <video id="video" src="static/movie.mp4" class="video" style="width:100%;min-height:100%;font-size: 100%;line-height: 0;vertical-align: baseline;" preload="auto" x5-video-player-type="h5" x5-video-player-fullscreen="true" webkit-playsinline="true" playsinline="true"></video>
+    </div>
+
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script language="javascript">
+      function onShareComplete(res) {
+        //window.location.href='';
+      }
+      document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+          WeixinJSBridge.invoke('sendAppMessage', {
+            "img_url": window.shareData.imgUrl,
+            "link": window.shareData.timeLineLink,
+            "desc": window.shareData.tContent,
+            "title": window.shareData.tTitle
+          }, onShareComplete);
+        });
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+          WeixinJSBridge.invoke('shareTimeline', {
+            "img_url": window.shareData.imgUrl,
+            "img_width": "300",
+            "img_height": "300",
+            "link": window.shareData.timeLineLink,
+            "desc": window.shareData.tContent,
+            "title": window.shareData.tTitle
+          }, onShareComplete);
+        });
+      }, false);
+      if(window.TencentNews && window.TencentNews.setShareArticleInfo){
+        window.TencentNews.setShareArticleInfo(
+          window.shareData.tTitle,
+          window.shareData.tContent,
+          window.shareData.timeLineLink,
+          window.shareData.imgUrl
+        );
+      }
+    </script>
+  </body>
+</html>
